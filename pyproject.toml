@@ -3,5 +3,17 @@ name = "scheduler"
 version = "0.1.0"
 description = "Software to schedule jobs to deploy through ci/cd pipelines"
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "sqlalchemy>=2.0.40",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = '.'
+addopts = '-p no:warnings'
