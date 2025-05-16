@@ -9,16 +9,18 @@ class JobsRepository(ABC):
     def save(self, job: Job) -> Job:
         pass
 
-    # TODO: tobe implemented
-    # @abstractmethod
-    # def save_batch(self, jobs: List[Job]) -> None:
-    #     pass
-
     @abstractmethod
-    def find_job(self, job_id: int) -> Job:
+    def save_batch(self, jobs: List[Job]) -> List[Job]:
         pass
 
-    # TODO: tobe implemented
-    # @abstractmethod
-    # def update_status(self, job_id: int, status: str) -> None:
-    #     pass
+    @abstractmethod
+    def find(self, job_id: int) -> Job:
+        pass
+
+    @abstractmethod
+    def update_status(self, job_id: int, status: str) -> Job:
+        pass
+    
+    @abstractmethod
+    def delete(self, job_id: int) -> None:
+        pass

@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from src.adapters.db.models import Base
-from src.adapters.db.postegres_job_repo import PostgreaJobRepository
+from src.adapters.db.postegres_job_repo import PostgresJobRepository
 
 
 @pytest.fixture(scope='function')
@@ -26,4 +26,4 @@ def db_session():
 
 @pytest.fixture
 def job_repository(db_session):
-    return PostgreaJobRepository(db_session)
+    return PostgresJobRepository(db_session)
