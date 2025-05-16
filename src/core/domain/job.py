@@ -9,7 +9,7 @@ class Job:
     branch: str
     scheduled_at: time
     platform: str
-    status: str = "pending"
+    status: str = 'pending'
     id: Optional[int] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None

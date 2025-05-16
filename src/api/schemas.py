@@ -1,8 +1,11 @@
-from pydantic import BaseModel
 from enum import StrEnum
+
+from pydantic import BaseModel
+
 
 class Platform(StrEnum):
     github_actions = 'Github-Actions'
+
 
 class Job(BaseModel):
     url: str

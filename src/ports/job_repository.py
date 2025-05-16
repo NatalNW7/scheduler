@@ -20,7 +20,7 @@ class JobsRepository(ABC):
     @abstractmethod
     def update_status(self, job_id: int, status: str) -> Job:
         pass
-    
+
     @abstractmethod
     def delete(self, job_id: int) -> None:
         pass

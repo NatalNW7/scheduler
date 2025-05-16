@@ -1,10 +1,13 @@
+from contextlib import contextmanager
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from contextlib import contextmanager
+
 from src.config.settings import Settings
 
 engine = create_engine(Settings.DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
+
 
 @contextmanager
 def get_db_session():
